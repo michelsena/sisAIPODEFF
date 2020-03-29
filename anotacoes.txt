@@ -1,0 +1,38 @@
+
+
+
+
+--> endereços
+https://youtu.be/VowlqgLzZuw
+curso Modelo Relacional no excel
+
+https://github.com/lucasrafagnin/CID10-SQL/blob/master/capitulo.sql
+
+Apesar dos valores prédefinidos, essa célula aceita outros valores
+
+Valor não permitido. É preciso escolher um dos valores pré-definidos. Por favor, clique em cancelar e escolha um valor
+
+--> geral
+Este artigo descreve a sintaxe da fórmula e o uso da função CORRESP (função: um fórmula pré-desenvolvida que assume um valor ou vários valores, executa uma operação e retorna um valor ou vários valores. Use as funções para simplificar e reduzir fórmulas em uma planilha, especialmente aquelas que executam cálculos longos e complexos.) no Microsoft Excel.
+
+Descrição
+A função CORRESP procura um item especificado em um intervalo (intervalo: duas ou mais células em uma planilha. As células de um intervalo podem ser adjacentes ou não adjacentes.) de células e retorna a posição relativa desse item no intervalo. Por exemplo, se o intervalo A1:A3 contiver os valores 5, 25 e 38, a fórmula
+
+=CORRESP(25,A1:A3,0)
+
+retornará o número 2, já que 25 é o segundo item no intervalo.
+
+Use CORRESP no lugar de uma das funções PROC quando precisar da posição de um item em um intervalo em vez do item propriamente dito. Por exemplo, você pode usar a função CORRESP para fornecer um valor para o argumento núm_lin da função ÍNDICE.
+
+Sintaxe
+CORRESP(valor_procurado, matriz_procurada, [tipo_correspondência])A sintaxe da função CORRESP tem os seguintes argumentos (argumento: um valor que fornece informações a uma ação, um evento, um método, uma função ou um procedimento.):
+
+valor_procurado  Obrigatório. O valor que você deseja corresponder em matriz_procurada. Por exemplo, quando você procura o número de alguém na lista telefônica, está usando o nome da pessoa como valor de pesquisa, mas o número do telefone é o valor desejado.
+O argumento valor_procurado pode ser um valor (número, texto ou valor lógico) ou uma referência de célula a um número, texto ou valor lógico.
+
+matriz_procurada  Obrigatório. O intervalo de células que estão sendo pesquisadas.
+tipo_correspondência  Opcional. O número -1, 0 ou 1. O argumento tipo_correspondência especifica como o Excel corresponde valor_procurado com os valores em matriz_procurada. O valor padrão desse argumento é 1.
+
+tipo_correspondência  Opcional. O número -1, 0 ou 1. O argumento tipo_correspondência especifica como o Excel corresponde valor_procurado com os valores em matriz_procurada. O valor padrão desse argumento é 1.
+
+=DESLOC(cidades;CORRESP(A2;SG;0)-1;0;CONT.SE(SG;A2))

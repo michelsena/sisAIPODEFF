@@ -1,4 +1,7 @@
+ini: 15:28
 
+-------------------------------> para fazer
+* fazer SQL do categoria e sub categoria
 
 
 
@@ -14,11 +17,17 @@ Valor não permitido. É preciso escolher um dos valores pré-definidos. Por favor,
 
 -------------------------------> geral
 --> 
-SELECT cid_capitulo.cat_inicio, cid_capitulo.cat_fim, cid_capitulo.descricao, cid_grupo.cat_inicio, cid_grupo.cat_fim, cid_grupo.descricao
-FROM cid_capitulo, cid_grupo
-WHERE capitulo_id = cid_capitulo.id  
-ORDER BY `cid_capitulo`.`cat_inicio`  ASC
+SELECT cid_grupo.id, cid_capitulo.cat_inicio, cid_capitulo.cat_fim, cid_capitulo.descricao, cid_grupo.cat_inicio, cid_grupo.cat_fim, cid_grupo.descricao 
+FROM cid_capitulo, cid_grupo 
+WHERE capitulo_id = cid_capitulo.id
 
+SELECT cid_categoria.id, cid_grupo.cat_inicio, cid_grupo.cat_fim, cid_grupo.descricao, cid_categoria.id, cid_categoria.descricao 
+FROM `cid_grupo`, cid_categoria 
+WHERE cid_categoria.id >= cid_grupo.cat_inicio AND cid_categoria.id <= cid_grupo.cat_fim
+
+select cid_sub_categoria.id, cid_categoria.id, cid_categoria.descricao, cid_sub_categoria.id, cid_sub_categoria.descricao
+from  cid_categoria, cid_sub_categoria
+where  cid_sub_categoria.categoria_id = cid_categoria.id
 --> Excell
 Este artigo descreve a sintaxe da fórmula e o uso da função CORRESP (função: um fórmula pré-desenvolvida que assume um valor ou vários valores, executa uma operação e retorna um valor ou vários valores. Use as funções para simplificar e reduzir fórmulas em uma planilha, especialmente aquelas que executam cálculos longos e complexos.) no Microsoft Excel.
 
@@ -43,7 +52,7 @@ tipo_correspondência  Opcional. O número -1, 0 ou 1. O argumento tipo_correspond
 tipo_correspondência  Opcional. O número -1, 0 ou 1. O argumento tipo_correspondência especifica como o Excel corresponde valor_procurado com os valores em matriz_procurada. O valor padrão desse argumento é 1.
 
 =DESLOC(cidades;CORRESP(A2;SG;0)-1;0;CONT.SE(SG;A2))
-=DESLOC(grupo_descricoes;CORRESP(D3;CG;0)-1;0;CONT.SE(CG;D3))
-=DESLOC(categorias;CORRESP(F2;GC;0)-1;0;CONT.SE(GC;F2))
+=DESLOC(gruposTeste;CORRESP(D3;CGT;0)-1;0;CONT.SE(CGT;D3))
+=DESLOC(categoriasTeste;CORRESP(F3;GCT;0)-1;0;CONT.SE(GCT;F3))
 
 =DESLOC(categorias;CORRESP(E3;GC;0)-1;0;CONT.SE(GC;E3))

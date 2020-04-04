@@ -1,0 +1,15 @@
+-------------------------------------> Análise de requisitos
+--> Requisitos funcionais
+* sistema de cadastro com os seguintes relatórios
+  - Quantidades de pessoas em cada cid
+
+  - Quantidade de.pessoas por sexo
+
+  - Quantidade.de.pessoas usando passe. Livre
+
+  - Quantidade de.pessoas por bairro
+
+  - Qual doença tem maior quantidade por bairro
+
+--> Requisitos não funcionais
+* Sistema web mobile First
